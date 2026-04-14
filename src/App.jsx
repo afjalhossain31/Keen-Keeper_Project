@@ -1,4 +1,21 @@
 import { useEffect, useState } from 'react'
+import { Routes, Route } from 'react-router-dom'
+import RootLayout from './layouts/RootLayout'
+import HomePage from './pages/HomePage'
+import TimelinePage from './pages/TimelinePage'
+import StatsPage from './pages/StatsPage'
+import FriendDetailsPage from './pages/FriendDetailsPage'
+import NotFoundPage from './pages/NotFoundPage'
+import { getStoredTimeline, saveStoredTimeline } from './utils/storage'
+import friendsData from './data/friends.json'
+
+export default function App() {
+  const [friends, setFriends] = useState([])
+  const [loading, setLoading] = useState(true)
+  const [timeline, setTimeline] = useState(getStoredTimeline())
+  const [toasts, setToasts] = useState([])
+
+  useEffect(() => {
     const timer = setTimeout(() => {
       setFriends(friendsData)
       setLoading(false)

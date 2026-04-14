@@ -1,4 +1,34 @@
 import { useMemo, useState } from 'react'
+import { Phone, MessageCircle, Video } from 'lucide-react'
+
+function TimelineRow({ item }) {
+  const icons = {
+    Call: Phone,
+    Text: MessageCircle,
+    Video: Video,
+  }
+  const Icon = icons[item.type] || Phone
+
+  return (
+    <div className="rounded-[32px] bg-white p-6 shadow-sm ring-1 ring-slate-200">
+      <div className="flex items-center gap-4">
+        <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#155e52] text-white">
+          <Icon size={20} />
+        </div>
+        <div className="flex-1">
+          <h3 className="font-semibold">{item.title}</h3>
+          <p className="text-sm text-slate-500">{item.date}</p>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export default function TimelinePage({ timeline }) {
+  const [filter, setFilter] = useState('All')
+  const [sort, setSort] = useState('newest')
+  const [query, setQuery] = useState('')
+
   const filteredTimeline = useMemo(() => {
     let data = [...timeline]
 
