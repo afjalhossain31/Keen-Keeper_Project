@@ -1,7 +1,7 @@
 import { Outlet } from 'react-router-dom'
-import Navbar from '../components/Navbar'
-import Footer from '../components/Footer'
-import ToastStack from '../components/ToastStack'
+import Navbar from '../Components/Navbar'
+import Footer from '../Components/Footer'
+import ToastStack from '../Components/ToastStack'
 
 export default function RootLayout({ toasts }) {
   return (

@@ -1,12 +1,6 @@
 import { Loader2, UserRound, Bell, CalendarDays, Phone, Plus } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
-const statusStyles = {
-  overdue: 'bg-[#ff4d4d] text-white',
-  'almost due': 'bg-[#f0ad4e] text-white',
-  'on-track': 'bg-[#5cb85c] text-white',
-}
-
 function FriendCard({ friend }) {
   return (
     <Link
@@ -39,9 +33,9 @@ function FriendCard({ friend }) {
         <span className={`rounded-full px-6 py-2 text-sm font-bold text-white shadow-sm ${
           friend.status === 'overdue' ? 'bg-[#ef4444]' : 
           friend.status === 'almost due' ? 'bg-[#f59e0b]' : 
-          'bg-[#22c55e]'
+          'bg-[#1e4620]'
         }`}>
-          {friend.status === 'on-track' ? 'On Track' : friend.status === 'almost due' ? 'Almost Due' : 'Overdue'}
+          {friend.status === 'on-track' ? 'On-Track' : friend.status === 'almost due' ? 'Almost Due' : 'Overdue'}
         </span>
       </div>
     </Link>
@@ -86,7 +80,7 @@ export default function HomePage({ friends, loading, timeline }) {
           {summary.map(({ label, value, icon: Icon }) => (
             <div key={label} className="rounded-3xl border border-slate-200 bg-slate-50 p-5">
               <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-2xl bg-white text-[#155e52] shadow-sm ring-1 ring-slate-200">
-                <Icon size={20} />
+                {Icon && <Icon size={20} />}
               </div>
               <p className="text-3xl font-bold">{value}</p>
               <p className="mt-1 text-sm text-slate-500">{label}</p>
