@@ -1,0 +1,62 @@
+[
+    {
+      "id": 4,
+      "name": "Sophia Martinez",
+      "picture": "https://images.unsplash.com/photo-1504257432389-52343af06ae3?auto=format&fit=crop&w=500&q=80",
+      "email": "sophia.martinez@example.com",
+      "days_since_contact": 10,
+      "status": "overdue",
+      "tags": ["school", "debate club"],
+      "bio": "One of my oldest friends from school. We usually catch up over long phone calls every few weeks.",
+      "goal": 14,
+      "next_due_date": "2026-04-08"
+    },
+  {
+    "id": 5,
+    "name": "Daniel Brooks",
+    "picture": "https://images.unsplash.com/photo-1504257432389-52343af06ae3?auto=format&fit=crop&w=500&q=80",
+    "email": "daniel.brooks@example.com",
+    "days_since_contact": 7,
+    "status": "on-track",
+    "tags": ["freelance", "tech"],
+    "bio": "Worked together on a freelance dashboard build. We share ideas about products and client work.",
+    "goal": 10,
+    "next_due_date": "2026-04-19"
+  },
+  {
+    "id": 6,
+    "name": "Emma Wilson",
+    "picture": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=500&q=80",
+    "email": "emma.wilson@example.com",
+    "days_since_contact": 13,
+    "status": "almost due",
+    "tags": ["book club", "neighbor"],
+    "bio": "Lives nearby and always recommends great books and local coffee shops.",
+    "goal": 14,
+    "next_due_date": "2026-04-13"
+  },
+  {
+    "id": 7,
+    "name": "Noah Patel",
+    "picture": "https://images.unsplash.com/photo-1504593811423-6dd665756598?auto=format&fit=crop&w=500&q=80",
+    "email": "noah.patel@example.com",
+    "days_since_contact": 15,
+    "status": "overdue",
+    "tags": ["startup", "football"],
+    "bio": "We first met at a hackathon. Now we mostly reconnect through calls about product ideas and football.",
+    "goal": 14,
+    "next_due_date": "2026-04-11"
+  },
+  {
+    "id": 8,
+    "name": "Lina Ahmed",
+    "picture": "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?auto=format&fit=crop&w=500&q=80",
+    "email": "lina.ahmed@example.com",
+    "days_since_contact": 3,
+    "status": "on-track",
+    "tags": ["family friend", "study"],
+    "bio": "Family friend who also helped me prepare for exams. We often exchange study tips and life updates.",
+    "goal": 14,
+    "next_due_date": "2026-04-25"
+  }
+]

@@ -22,6 +22,7 @@ export default function Navbar() {
         </Link>
 
         <nav className="flex flex-wrap items-center gap-2 rounded-full bg-slate-100 p-1.5">
+          {/* eslint-disable-next-line no-unused-vars */}
           {navItems.map(({ to, label, icon: Icon }) => (
             <NavLink
               key={to}
