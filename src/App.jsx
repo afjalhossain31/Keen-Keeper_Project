@@ -13,7 +13,6 @@ export default function App() {
   const [friends, setFriends] = useState([])
   const [loading, setLoading] = useState(true)
   const [timeline, setTimeline] = useState(getStoredTimeline())
-  const [toasts, setToasts] = useState([])
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -28,15 +27,6 @@ export default function App() {
     saveStoredTimeline(timeline)
   }, [timeline])
 
-  const showToast = (message) => {
-    const id = Date.now() + Math.random()
-    setToasts((prev) => [...prev, { id, message }])
-
-    setTimeout(() => {
-      setToasts((prev) => prev.filter((toast) => toast.id !== id))
-    }, 2500)
-  }
-
   const addTimelineEntry = (friend, type) => {
     const newEntry = {
       id: Date.now(),
@@ -47,7 +37,6 @@ export default function App() {
     }
 
     setTimeline((prev) => [newEntry, ...prev])
-    showToast(`${type} logged for ${friend.name}`)
   }
 
   return (
@@ -55,7 +44,7 @@ export default function App() {
       <Route
         path="/"
         element={
-          <RootLayout toasts={toasts} />
+          <RootLayout />
         }
       >
         <Route index element={<HomePage friends={friends} loading={loading} timeline={timeline} />} />

@@ -5,7 +5,7 @@ function FriendCard({ friend }) {
   return (
     <Link
       to={`/friend/${friend.id}`}
-      className="group flex flex-col items-center rounded-xl bg-white p-8 shadow-sm ring-1 ring-slate-100 transition hover:shadow-md"
+      className="group flex flex-col items-center rounded-[32px] bg-white p-8 shadow-sm ring-1 ring-slate-100 transition hover:shadow-md"
     >
       <div className="relative mb-6">
         <img

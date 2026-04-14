@@ -3,7 +3,7 @@ import Navbar from '../Components/Navbar'
 import Footer from '../Components/Footer'
 import ToastStack from '../Components/ToastStack'
 
-export default function RootLayout({ toasts }) {
+export default function RootLayout() {
   return (
     <div className="min-h-screen bg-[#f7f8f8] text-slate-900">
       <Navbar />
@@ -11,7 +11,6 @@ export default function RootLayout({ toasts }) {
         <Outlet />
       </main>
       <Footer />
-      <ToastStack toasts={toasts} />
     </div>
   )
 }
