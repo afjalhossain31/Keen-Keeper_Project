@@ -5,7 +5,7 @@ function FriendCard({ friend }) {
   return (
     <Link
       to={`/friend/${friend.id}`}
-      className="group flex flex-col items-center rounded-[32px] bg-white p-8 shadow-sm ring-1 ring-slate-100 transition hover:shadow-md"
+      className="group flex flex-col items-center rounded-[32px] bg-white p-8 shadow-sm ring-1 ring-slate-100 transition hover:shadow-xl"
     >
       <div className="relative mb-6">
         <img
@@ -30,11 +30,10 @@ function FriendCard({ friend }) {
       </div>
 
       <div className="mt-5">
-        <span className={`rounded-full px-6 py-2 text-sm font-bold text-white shadow-sm ${
-          friend.status === 'overdue' ? 'bg-[#ef4444]' : 
-          friend.status === 'almost due' ? 'bg-[#f59e0b]' : 
-          'bg-[#1e4620]'
-        }`}>
+        <span className={`rounded-full px-6 py-2 text-sm font-bold text-white shadow-sm ${friend.status === 'overdue' ? 'bg-[#ef4444]' :
+          friend.status === 'almost due' ? 'bg-[#f59e0b]' :
+            'bg-[#1e4620]'
+          }`}>
           {friend.status === 'on-track' ? 'On-Track' : friend.status === 'almost due' ? 'Almost Due' : 'Overdue'}
         </span>
       </div>
@@ -63,14 +62,15 @@ export default function HomePage({ friends, loading, timeline }) {
     <div className="space-y-8">
       <section className="overflow-hidden rounded-[32px] bg-white shadow-sm ring-1 ring-slate-200">
         <div className="border-b border-slate-100 bg-[linear-gradient(180deg,#ffffff_0%,#f8fafc_100%)] px-6 py-12 text-center sm:px-10">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.25em] text-[#155e52]">Friendship Tracker</p>
+          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.25em] text-[#155e52]">Friendship-Tracker</p>
           <h1 className="mx-auto max-w-3xl text-3xl font-bold tracking-tight sm:text-5xl">
-            Reconnect with the people who matter most.
+            Friends to keep close in your life
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-sm leading-6 text-slate-600 sm:text-base">
-            Track conversations, stay consistent with your relationship goals, and never let meaningful friendships fade away.
+            Your personal shelf of meaningful connections. Browse, tend, and nurture the
+            relationships that matter most.
           </p>
-          <button className="mt-6 inline-flex items-center gap-2 rounded-full bg-[#155e52] px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:translate-y-[-1px]">
+          <button className="mt-6 inline-flex items-center gap-2 rounded-lg bg-[#155e52] px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:translate-y-[-3px]">
             <Plus size={16} />
             Add a Friend
           </button>
@@ -92,7 +92,7 @@ export default function HomePage({ friends, loading, timeline }) {
       <section>
         <div className="mb-4">
           <h2 className="text-2xl font-bold tracking-tight">Your Friends</h2>
-          <p className="text-sm text-slate-500">Keep tabs on who needs a quick check-in.</p>
+          {/* <p className="text-sm text-slate-500">Keep tabs on who needs a quick check-in.</p> */}
         </div>
 
         {loading ? (
