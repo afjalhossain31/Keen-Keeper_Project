@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="bg-[#1a4731] py-15 text-white">
+    <footer className="bg-[#244D3F] py-16 text-white">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center text-center">
           <h2 className="text-7xl font-bold tracking-tight">Keen-Keeper</h2>

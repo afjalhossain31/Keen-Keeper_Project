@@ -1,11 +1,11 @@
-import { Loader2, UserRound, Bell, CalendarDays, Phone, Plus } from 'lucide-react'
+import { Loader2, Plus } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
 function FriendCard({ friend }) {
   return (
     <Link
       to={`/friend/${friend.id}`}
-      className="group flex flex-col items-center rounded-[32px] bg-white p-8 shadow-sm ring-1 ring-slate-100 transition hover:shadow-xl"
+      className="group flex flex-col items-center rounded-4xl bg-white p-8 shadow-sm ring-1 ring-slate-100 transition hover:shadow-xl"
     >
       <div className="relative mb-6">
         <img
@@ -52,10 +52,10 @@ export default function HomePage({ friends, loading, timeline }) {
   }).length
 
   const summary = [
-    { label: 'Total Friends', value: totalFriends, icon: UserRound },
-    { label: 'Overdue', value: overdueFriends, icon: Bell },
-    { label: 'This Week', value: recentInteractions, icon: CalendarDays },
-    { label: 'Quick Call', value: '...', icon: Phone },
+    { label: 'Total Friends', value: totalFriends },
+    { label: 'Overdue', value: overdueFriends },
+    { label: 'This Week', value: recentInteractions },
+    { label: 'Quick Call', value: '...' },
   ]
 
   return (
@@ -70,7 +70,7 @@ export default function HomePage({ friends, loading, timeline }) {
             Your personal shelf of meaningful connections. Browse, tend, and nurture the
             relationships that matter most.
           </p>
-          <button className="mt-6 inline-flex items-center gap-2 rounded-lg bg-[#155e52] px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:translate-y-[-3px]">
+          <button className="mt-6 inline-flex items-center gap-2 rounded-lg bg-[#155e52] px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:-translate-y-0.75">
             <Plus size={16} />
             Add a Friend
           </button>
@@ -93,7 +93,7 @@ export default function HomePage({ friends, loading, timeline }) {
         </div>
 
         {loading ? (
-          <div className="grid min-h-[280px] place-items-center rounded-[32px] border border-dashed border-slate-300 bg-white">
+          <div className="grid min-h-70 place-items-center rounded-4xl border border-dashed border-slate-300 bg-white">
             <div className="text-center">
               <Loader2 className="mx-auto mb-3 animate-spin text-[#155e52]" size={34} />
               <p className="text-sm text-slate-500">Loading friends data...</p>

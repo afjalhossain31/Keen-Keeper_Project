@@ -28,7 +28,7 @@ export default function FriendDetailsPage({ friends, onQuickAction }) {
 // PageNot Found functionallity
   if (!friend) {
     return (
-      <div className="flex min-h-[400px] flex-col items-center justify-center text-center">
+      <div className="flex min-h-100 flex-col items-center justify-center text-center">
         <h1 className="text-2xl font-bold text-slate-800">Friend Not Found</h1>
         <Link to="/" className="mt-4 rounded-full bg-[#155e52] px-6 py-2 text-white transition hover:bg-opacity-90">
           Go back home
