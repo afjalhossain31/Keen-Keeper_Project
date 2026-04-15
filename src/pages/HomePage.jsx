@@ -60,8 +60,8 @@ export default function HomePage({ friends, loading, timeline }) {
 
   return (
     <div className="space-y-8">
-      <section className="overflow-hidden rounded-[32px] bg-white shadow-sm ring-1 ring-slate-200">
-        <div className="border-b border-slate-100 bg-[linear-gradient(180deg,#ffffff_0%,#f8fafc_100%)] px-6 py-12 text-center sm:px-10">
+      <section className="overflow-hidden rounded-[22px] bg-white ring-1 ring-slate-100">
+        <div className="border-b border-slate-50 bg-[linear-gradient(180deg,#ffffff_0%,#fafbfc_100%)] px-6 py-12 text-center sm:px-10">
           <p className="mb-3 text-sm font-semibold uppercase tracking-[0.25em] text-[#155e52]">Friendship-Tracker</p>
           <h1 className="mx-auto max-w-3xl text-3xl font-bold tracking-tight sm:text-5xl">
             Friends to keep close in your life
@@ -77,13 +77,10 @@ export default function HomePage({ friends, loading, timeline }) {
         </div>
 
         <div className="grid gap-4 px-6 py-6 sm:grid-cols-2 lg:grid-cols-4 sm:px-10">
-          {summary.map(({ label, value, icon: Icon }) => (
-            <div key={label} className="rounded-3xl border border-slate-200 bg-slate-50 p-5">
-              <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-2xl bg-white text-[#155e52] shadow-sm ring-1 ring-slate-200">
-                {Icon && <Icon size={20} />}
-              </div>
-              <p className="text-3xl font-bold">{value}</p>
-              <p className="mt-1 text-sm text-slate-500">{label}</p>
+          {summary.map(({ label, value }) => (
+            <div key={label} className="flex flex-col items-center justify-center rounded-3xl border border-slate-200 bg-[#FFFFFF] p-8 text-center shadow-sm">
+              <p className="text-4xl font-bold text-[#072722]">{value}</p>
+              <p className="mt-2 text-sm font-medium text-slate-500 uppercase tracking-wide">{label}</p>
             </div>
           ))}
         </div>
