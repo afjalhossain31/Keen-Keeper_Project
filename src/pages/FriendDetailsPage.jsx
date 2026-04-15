@@ -14,7 +14,7 @@ function SidebarButton({ icon: Icon, label, danger }) {
 
 function StatCard({ label, value, subLabel }) {
   return (
-    <div className="flex flex-col items-center justify-center rounded-[20px] bg-white p-8 text-center shadow-sm ring-1 ring-slate-100">
+    <div className="flex flex-col items-center justify-center rounded-[20px] bg-white p-8 text-center shadow-sm ring-1 ring-slate-100 transition-all duration-300 hover:shadow-md hover:-translate-y-0.5">
       <p className="text-4xl font-bold text-[#1e3a34]">{value}</p>
       <p className="mt-2 text-sm font-medium text-slate-400">{label}</p>
       {subLabel && <p className="text-xs text-slate-400">{subLabel}</p>}
@@ -25,7 +25,7 @@ function StatCard({ label, value, subLabel }) {
 export default function FriendDetailsPage({ friends, onQuickAction }) {
   const { id } = useParams()
   const friend = friends.find(f => f.id === parseInt(id))
-
+// PageNot Found functionallity
   if (!friend) {
     return (
       <div className="flex min-h-[400px] flex-col items-center justify-center text-center">
@@ -86,6 +86,7 @@ export default function FriendDetailsPage({ friends, onQuickAction }) {
             />
           </div>
 
+
           {/* Relationship Goal Card */}
           <div className="rounded-3xl bg-white p-8 shadow-sm ring-1 ring-slate-100">
             <div className="flex items-center justify-between">
@@ -100,30 +101,36 @@ export default function FriendDetailsPage({ friends, onQuickAction }) {
           </div>
 
           {/* Quick Check-In Card */}
-          <div className="rounded-3xl bg-white p-8 shadow-sm ring-1 ring-slate-100">
-            <h2 className="text-xl font-bold text-[#1e3a34]">Quick Check-In</h2>
-            <div className="mt-8 grid grid-cols-3 gap-4">
+          <div className="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-slate-100">
+            <h2 className="text-lg font-bold text-[#1e3a34]">Quick Check-In</h2>
+            <div className="mt-6 grid grid-cols-3 gap-3">
               <button 
                 onClick={() => onQuickAction(friend, 'Call')}
-                className="flex flex-col items-center gap-3 rounded-2xl border border-slate-50 bg-[#f8fafc] py-8 transition hover:bg-slate-100"
+                className="group flex flex-col items-center gap-2 rounded-2xl border border-slate-50 bg-[#f8fafc] py-6.5 transition-all duration-300 hover:bg-white hover:shadow-sm hover:-translate-y-0.5 hover:border-[#1e3a34]/5"
               >
-                <Phone size={24} className="text-[#1e3a34]" />
+                <div className="rounded-full p-2 transition-colors group-hover:bg-[#1e3a34]/5">
+                  <Phone size={22} className="text-[#1e3a34]" />
+                </div>
                 <span className="text-sm font-semibold text-[#1e3a34]">Call</span>
               </button>
               
               <button 
                 onClick={() => onQuickAction(friend, 'Text')}
-                className="flex flex-col items-center gap-3 rounded-2xl border border-slate-50 bg-[#f8fafc] py-8 transition hover:bg-slate-100"
+                className="group flex flex-col items-center gap-2 rounded-2xl border border-slate-50 bg-[#f8fafc] py-6.5 transition-all duration-300 hover:bg-white hover:shadow-sm hover:-translate-y-0.5 hover:border-[#1e3a34]/5"
               >
-                <MessageCircle size={24} className="text-[#1e3a34]" />
+                <div className="rounded-full p-2 transition-colors group-hover:bg-[#1e3a34]/5">
+                  <MessageCircle size={22} className="text-[#1e3a34]" />
+                </div>
                 <span className="text-sm font-semibold text-[#1e3a34]">Text</span>
               </button>
               
               <button 
                 onClick={() => onQuickAction(friend, 'Video')}
-                className="flex flex-col items-center gap-3 rounded-2xl border border-slate-50 bg-[#f8fafc] py-8 transition hover:bg-slate-100"
+                className="group flex flex-col items-center gap-2 rounded-2xl border border-slate-50 bg-[#f8fafc] py-6.5 transition-all duration-300 hover:bg-white hover:shadow-sm hover:-translate-y-0.5 hover:border-[#1e3a34]/5"
               >
-                <Video size={24} className="text-[#1e3a34]" />
+                <div className="rounded-full p-2 transition-colors group-hover:bg-[#1e3a34]/5">
+                  <Video size={22} className="text-[#1e3a34]" />
+                </div>
                 <span className="text-sm font-semibold text-[#1e3a34]">Video</span>
               </button>
             </div>

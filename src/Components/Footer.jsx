@@ -9,7 +9,7 @@ export default function Footer() {
           </p>
 
           {/* added Social Links  */}
-          <div className="mt-10">
+          <div className="mt-8">
             <h3 className="text-xl font-medium">Social Links</h3>
             <div className="mt-4 flex gap-4">
               <a href="#" className="flex h-12 w-12 items-center justify-center rounded-full bg-white transition-all duration-300 hover:bg-slate-200 hover:scale-110 overflow-hidden shadow-lg">
@@ -25,11 +25,11 @@ export default function Footer() {
           </div>
         </div>
         {/* added Border  */}
-        <div className="mt-9 border-t border-white/12 opacity-70"></div>
+        <div className="mt-8 border-t border-white/12 opacity-70"></div>
 
-        <div className="mt-8 flex flex-col items-center justify-between md:flex-row">
+        <div className="mt-5 flex flex-col items-center justify-between md:flex-row">
           <p className="text-base text-slate-400">© 2026 Keen-Keeper. All rights reserved.</p>
-          <div className="mt-5 flex gap-10 md:mt-0">
+          <div className="mt-4 flex gap-10 md:mt-0">
             <a href="#" className="text-base text-slate-400 hover:text-white transition">Privacy Policy</a>
             <a href="#" className="text-base text-slate-400 hover:text-white transition">Terms of Service</a>
             <a href="#" className="text-base text-slate-400 hover:text-white transition">Cookies</a>
