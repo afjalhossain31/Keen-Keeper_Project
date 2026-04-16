@@ -53,12 +53,7 @@ export default function App() {
   return (
     <>
       <Routes>
-        <Route
-          path="/"
-          element={
-            <RootLayout />
-          }
-        >
+        <Route path="/" element={<RootLayout />}>
           <Route index element={<HomePage friends={friends} loading={loading} timeline={timeline} />} />
           <Route path="timeline" element={<TimelinePage timeline={timeline} />} />
           <Route path="stats" element={<StatsPage timeline={timeline} />} />
