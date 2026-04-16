@@ -12,7 +12,7 @@ It allows users to manage relationships, track communication frequency, and log 
 
 ## Toast Notification System
 
-This project includes a custom Toast Notification System that shows a notification whenever the user performs actions like **(Call, Text, or Video)**
+This project includes a custom Toast Notification System that shows a notification whenever the user performs actions like **(Call, Text, or Video)**   
 👉 Whenever you click any action button, a toast appears at the top-right corner of the screen.
 
 
