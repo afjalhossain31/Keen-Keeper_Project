@@ -1,17 +1,55 @@
-## Project_22
-# React + Vite
+## Project_022
+#  Keen-Keeper Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---
 
-Currently, two official plugins are available:
+## Description
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+KeenKeeper is a modern and fully responsive friendship tracking web application that helps users stay connected with the people who matter most.
+It allows users to manage relationships, track communication frequency, and log interactions like calls, texts, and video chats in a clean and intuitive interface.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Technologies Used-
 
-## Expanding the ESLint configuration
+* ⚛️ React.js
+* 🌐 React Router DOM
+* 🎨 Tailwind CSS
+* 📊 Recharts
+* 🔔 Lucide React
+* 💾 LocalStorage
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## Key Features
+
+* Track friends with smart status indicators (**Overdue, Almost Due, On Track**)
+* Log Call, Text, and Video interactions with instant timeline updates
+* Visualize interaction data with an interactive analytics (Pie Chart)
+
+---
+
+## 🌐 Live Demo
+
+👉 Click here to explore: **[Live Project](YOUR-LIVE-LINK)**
+
+---
+
+## Installation
+
+```bash
+npm install
+npm run dev
+```
+
+---
+
+## Responsive Design
+
+This project is fully responsive and works smoothly on:
+
+* 📱 Mobile
+* 💻 Desktop
+* 📲 Tablet
+
+<p align="center">© 2026 Afjal Hossain. All Rights Reserved.</p>
